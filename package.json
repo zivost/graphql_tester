@@ -1,0 +1,33 @@
+{
+  "name": "graphql-petstore",
+  "description": "GraphQL interface for the RESTful API http://petstore.swagger.io/#/pet",
+  "repository": "git@github.com:gonber/graphql-petstore.git",
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "testing": "jest --watch",
+    "coverage": "jest --coverage --no-cache",
+    "lint": "eslint --max-warnings=0 --fix .",
+    "start": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "acorn": "^7.1.0",
+    "apollo-datasource-rest": "^0.6.10",
+    "apollo-server": "^2.9.14",
+    "graphql": "^14.5.8",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "jest": "24.9.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
