@@ -1,6 +1,8 @@
 module.exports = {
   Query: {
     pet: (_, { id }, { dataSources }) => dataSources.petStoreAPI.getPetById(id),
+    pets: (_, { status }, { dataSources }) => dataSources.petStoreAPI.findPetsByStatus(status),
+    iso: (_, { }, { dataSources }) => dataSources.petStoreAPI.iso(),
   },
   Mutation: {
     createPet: async (_, { pet }, { dataSources }) => {

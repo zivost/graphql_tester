@@ -10,14 +10,13 @@
     "testing": "jest --watch",
     "coverage": "jest --coverage --no-cache",
     "lint": "eslint --max-warnings=0 --fix .",
-    "start": "nodemon src/index.js"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "acorn": "^7.1.0",
     "apollo-datasource-rest": "^0.6.10",
     "apollo-server": "^2.9.14",
-    "graphql": "^14.5.8",
-    "nodemon": "^2.0.2"
+    "graphql": "^14.5.8"
   },
   "devDependencies": {
     "eslint": "^6.7.2",

@@ -1,4 +1,5 @@
 const { RESTDataSource } = require('apollo-datasource-rest');
+const iso = require("./iso");
 
 function petReducer({ id, name, status }) {
   return {
@@ -17,6 +18,16 @@ class PetStoreAPI extends RESTDataSource {
   async getPetById(id) {
     const res = await this.get(`pet/${id}`);
     return petReducer(res);
+  }
+  
+  async findPetsByStatus(status) {
+    const res = await this.get(`pet/findByStatus?status=${status}`);
+    return res;
+  }
+
+  async iso(s) {
+    console.log(iso.length)
+    return iso.default
   }
 
   async createPet({ name, status }) {
